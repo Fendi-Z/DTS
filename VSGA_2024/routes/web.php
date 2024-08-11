@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Selamat Datang';
+});
+
+Route::get('/hello', function () {
+    return "Hello VSGA";
+});
+
+Route::get('/world', function () {
+    return "Hello World";
+});
+
+Route::get('/about', function () {
+    return "NIM : 2231740033 <br>
+        Nama : Fendi Zulkarnain";
 });
