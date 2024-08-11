@@ -5,13 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>VSGA</title>
-
-        <!-- Styles -->
-        <style>
-            body {
-                text-align: center
-            }
-        </style>
     </head>
     <body>
         <h2>Ini adalah percobaan</h2>
