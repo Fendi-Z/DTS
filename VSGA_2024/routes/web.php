@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CRUDPhoto;
+use App\Http\Controllers\halloController;
 use App\Http\Controllers\pageControllerSatu;
 use App\Http\Controllers\pengajarController;
 use App\Http\Controllers\CRUDController;
@@ -133,7 +134,12 @@ Route::fallback(function() {
 //     return view('Hello', ['name' => 'Fendi']);
 // });
 
-Route::get('/greeting', [
-    welcomeController:: class,
+// Route::get('/greeting', [
+//     welcomeController:: class,
+//     'greeting'
+// ]);
+
+Route::get('/hello', [
+    halloController::class,
     'greeting'
 ]);
