@@ -29,3 +29,11 @@ Route::get('/about', function () {
     return "NIM : 2231740033 <br>
         Nama : Fendi Zulkarnain";
 });
+
+Route::get("/user/{name}", function ($name) {
+    return 'Nama Saya ' . $name;
+});
+
+Route::get('/posts/{post}/{comment}', function ($post, $comment) {
+    return 'Pos ke-' . $post . '<br>Komentar ke-' . $comment;
+});
