@@ -4,6 +4,7 @@ use App\Http\Controllers\CRUDPhoto;
 use App\Http\Controllers\pageControllerSatu;
 use App\Http\Controllers\pengajarController;
 use App\Http\Controllers\CRUDController;
+use App\Http\Controllers\welcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -128,6 +129,11 @@ Route::fallback(function() {
 //     'destroy'
 // ]);
 
-Route::get('selamat', function() {
-    return view('Hello', ['name' => 'Fendi']);
-});
+// Route::get('selamat', function() {
+//     return view('Hello', ['name' => 'Fendi']);
+// });
+
+Route::get('/greeting', [
+    welcomeController:: class,
+    'greeting'
+]);
