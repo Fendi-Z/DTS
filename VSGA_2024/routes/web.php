@@ -53,3 +53,49 @@ Route::get('about', function() {
 Route::get('tampil', function() {
     return view('tampil');
 })->name('tampil');
+
+Route::get('/pesandisini', function() {
+    return "<h1>Pesan Disini</h1>";
+});
+
+Route::redirect('/contact-us', 'pesandisini');
+
+Route::get('/polinema/dosen', function() {
+    return "<h1> Daftar Nama Dosen</h1>";
+});
+
+Route::get('/polinema/tendik', function() {
+    return "<h1> Daftar Nama Tendik</h1>";
+});
+
+Route::get('/polinema/jurusan', function() {
+    return "<h1> Daftar Nama Jurusan</h1>";
+});
+
+route::prefix('/polinema')->group(function() {
+    Route::get('/dosen', function() {
+        echo "<h1> Daftar Dosen</h1>";
+    });
+    
+    Route::get('/tendik', function() {
+        echo "<h1> Daftar Tendik</h1>";
+    });
+    
+    Route::get('/jurusan', function() {
+        echo "<h1> Daftar Jurusan</h1>";
+    });
+});
+
+route::prefix('/admin')->group(function() {
+    Route::get('/dosen', function() {
+        echo "<h1> Daftar Dosen</h1>";
+    });
+    
+    Route::get('/tendik', function() {
+        echo "<h1> Daftar Tendik</h1>";
+    });
+    
+    Route::get('/jurusan', function() {
+        echo "<h1> Daftar Jurusan</h1>";
+    });
+});
