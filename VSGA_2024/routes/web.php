@@ -72,7 +72,7 @@ Route::get('/polinema/jurusan', function() {
     return "<h1> Daftar Nama Jurusan</h1>";
 });
 
-route::prefix('/polinema')->group(function() {
+Route::prefix('/polinema')->group(function() {
     Route::get('/dosen', function() {
         echo "<h1> Daftar Dosen</h1>";
     });
@@ -86,7 +86,7 @@ route::prefix('/polinema')->group(function() {
     });
 });
 
-route::prefix('/admin')->group(function() {
+Route::prefix('/admin')->group(function() {
     Route::get('/dosen', function() {
         echo "<h1> Daftar Dosen</h1>";
     });
@@ -98,4 +98,8 @@ route::prefix('/admin')->group(function() {
     Route::get('/jurusan', function() {
         echo "<h1> Daftar Jurusan</h1>";
     });
+});
+
+Route::fallback(function() {
+    return "Maaf, alamat ini tidak ditemukan";
 });
