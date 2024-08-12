@@ -30,10 +30,18 @@ Route::get('/about', function () {
         Nama : Fendi Zulkarnain";
 });
 
-Route::get("/user/{name}", function ($name) {
-    return 'Nama Saya ' . $name;
-});
+// Route::get("/user/{name}", function ($name) {
+//     return 'Nama Saya ' . $name;
+// });
 
 Route::get('/posts/{post}/{comment}', function ($post, $comment) {
     return 'Pos ke-' . $post . '<br>Komentar ke-' . $comment;
+});
+
+Route::get('/user/{name?}', function ($name = null) {
+    return 'Nama Saya ' . $name;
+});
+
+Route::get('kodebarang/{jenis?}/{merek?}', function ($jb = 'K01', $mb = 'Nokia') {
+    return "Kode Barang $jb dan Nama Barang $mb";
 });
