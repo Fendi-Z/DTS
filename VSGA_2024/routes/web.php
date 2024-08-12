@@ -104,9 +104,9 @@ use Illuminate\Support\Facades\Route;
 //     });
 // });
 
-// Route::fallback(function() {
-//     return "Maaf, alamat ini tidak ditemukan";
-// });
+Route::fallback(function() {
+    return "Maaf, alamat ini tidak ditemukan";
+});
 
 // Route::get('/daftar-dosen', [pengajarController::class, 'daftarPengajar']);
 // Route::get('/tabel-pengajar', [pengajarController::class, 'tabelPengajar']);
@@ -114,16 +114,20 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/pasar-buah', [pageControllerSatu::class, 'satu']);
 
-Route::resource('crud', CRUDController::class);
+// Route::resource('crud', CRUDController::class);
 
-Route::resource('photos', CRUDPhoto::class)->only([
-    'index',
-    'show'
-]);
+// Route::resource('photos', CRUDPhoto::class)->only([
+//     'index',
+//     'show'
+// ]);
 
-Route::resource('photos', CRUDPhoto::class)->except([
-    'create',
-    'store',
-    'update',
-    'destroy'
-]);
+// Route::resource('photos', CRUDPhoto::class)->except([
+//     'create',
+//     'store',
+//     'update',
+//     'destroy'
+// ]);
+
+Route::get('selamat', function() {
+    return view('Hello', ['name' => 'Fendi']);
+});
