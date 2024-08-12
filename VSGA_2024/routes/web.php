@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\pageControllerSatu;
 use App\Http\Controllers\pengajarController;
 use Illuminate\Support\Facades\Route;
 
@@ -108,3 +109,5 @@ Route::fallback(function() {
 Route::get('/daftar-dosen', [pengajarController::class, 'daftarPengajar']);
 Route::get('/tabel-pengajar', [pengajarController::class, 'tabelPengajar']);
 Route::get('/blog-pengajar', [pengajarController::class, 'blogPengajar']);
+
+Route::get('/pasar-buah', [pageControllerSatu::class, 'satu']);
