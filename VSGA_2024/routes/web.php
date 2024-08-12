@@ -45,3 +45,11 @@ Route::get('/user/{name?}', function ($name = null) {
 Route::get('kodebarang/{jenis?}/{merek?}', function ($jb = 'K01', $mb = 'Nokia') {
     return "Kode Barang $jb dan Nama Barang $mb";
 });
+
+Route::get('about', function() {
+    return view('about');
+})->name('about');
+
+Route::get('tampil', function() {
+    return view('tampil');
+})->name('tampil');
